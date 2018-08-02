@@ -34,7 +34,7 @@ primitive.o: primitive.h primitive.cpp
 
 plane.o: plane.h plane.cpp
 	g++ -c plane.cpp -O3
-	
+
 sphere.o: sphere.h sphere.cpp
 	g++ -c sphere.cpp -O3
 
@@ -58,7 +58,7 @@ photonmap.o: photonmap.h photonmap.cpp
 
 hitpointMap.o: hitpointMap.h hitpointMap.cpp
 	g++ -c hitpointMap.cpp -O3 -std=c++11
-	
+
 raytracer.o: raytracer.h raytracer.cpp
 	g++ -c raytracer.cpp -O3 -std=c++11
 
@@ -66,4 +66,4 @@ photontracer.o: photontracer.h photontracer.cpp
 	g++ -c photontracer.cpp -O3 -std=c++11
 
 clean:
-	del *.bak *.o
+	rm *.bak *.o

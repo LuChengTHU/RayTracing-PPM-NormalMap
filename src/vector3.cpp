@@ -44,7 +44,7 @@ Vector3& operator *= ( Vector3& A , const double& k ) {
 	return A;
 }
 
-Vector3& operator += ( Vector3& A , const double& k ) {
+Vector3& operator /= ( Vector3& A , const double& k ) {
 	A = A / k;
 	return A;
 }
@@ -107,7 +107,7 @@ Vector3 Vector3::GetAnVerticalVector() {
 	Vector3 ret = Cross(Vector3( 0 , 0 , 1 ));
 	if ( ret.IsZeroVector() ) ret = Vector3( 1 , 0 , 0 );
 		else ret = ret.GetUnitVector();
-	
+
 	return ret;
 }
 

@@ -8,6 +8,7 @@
 #include <sstream>
 #include <string>
 #include <algorithm>
+#include <cmath>
 
 extern const double INF;
 extern const double EPS;
@@ -17,13 +18,13 @@ class Primitive;
 
 class Collider {
 	Primitive* pri;
-	
+
 public:
 	double dist;
 	bool crash, front;
 	Vector3 N, C, I;
 	double u, v;
-	
+
 	Collider() {
 		pri = NULL;
 		crash = false;
@@ -44,14 +45,14 @@ public:
 	Primitive();
 	Primitive( const Primitive& );
 	~Primitive();
-	
+
 	void SetSample(int _sample) { sample = _sample; }
 	int GetSample() { return sample; }
 	void SetMaterial(Material* _material) { material = _material; }
 	Material* GetMaterial() { return material; }
 	Primitive* GetNext() { return next; }
 	void SetNext( Primitive* primitive ) { next = primitive; }
-	
+
 	virtual int getName() { return 0; }
 	virtual void PreTreatment() {}
 	virtual void Input( std::string , std::stringstream& );
