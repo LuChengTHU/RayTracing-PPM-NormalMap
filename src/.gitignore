@@ -1,3 +1,4 @@
 picture.bmp
 
-main.exe
+*.exe
+*.o
